@@ -10,3 +10,16 @@ let products = [
 ];
 
 
+// Get All Products
+app.get('/api/products', (req, res) => {
+  res.json({ success: true, count: products.length, data: products });
+});
+
+// Get individual ID's
+app.get('/api/products/:id', (req, res) => {
+  const product = products.find(product => product.id === parseInt(req.params.id));
+  if (!product) {
+    return res.status(404).json({ success: false, message: 'Product not found'});
+  }
+  res.json({ success: true, data: product });
+})
