@@ -22,7 +22,11 @@ app.get('/products', (req, res) => {
 
 
 // Get---Number of products sold
+app.get('/api/products/products-sold', (req, res) => {
+  const productsSold = products.reduce((sum, product) => sum + product.sold, 0);
 
+  res.json({ productsSold });
+})
 
 
 
