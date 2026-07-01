@@ -19,8 +19,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node product manager.js",
-    "dev": "nodemon product manager.js"
+    "start": "node productManager.js",
+    "dev": "nodemon productManager.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
